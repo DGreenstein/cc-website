@@ -1,7 +1,7 @@
 pipeline {
+    agent { docker 'node:6.3' }
     stages {
         stage('build') {
-            agent { dockerfile true }
             steps {
                 sh 'npm --version'
             }
