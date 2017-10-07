@@ -14,7 +14,7 @@ service:
   internalPort: 80
 ingress:
   enabled: true
-  ingress-path: /web
+  path: /web
   # Used to create Ingress record (should used with service.type: ClusterIP).
   hosts:
     - 
