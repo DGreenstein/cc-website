@@ -1,14 +1,7 @@
-pipeline {
-    agent { 
-        docker {
-            name 'default'
-        } 
-    }
-    stages {
-        stage('build') {
-            steps {
-                sh 'npm --version'
-            }
+podTemplate(name: 'default') {
+    node('default') {
+        stage('Run shell') {
+            sh 'echo hello world'
         }
     }
 }
