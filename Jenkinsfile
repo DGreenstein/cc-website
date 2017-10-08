@@ -1,5 +1,4 @@
-podTemplate(name: 'default',
-containers: [containerTemplate(name: 'jnlp')]) {
+podTemplate(name: 'default') {
     node() {
         stage('Run shell') {
             sh 'echo hello world'
