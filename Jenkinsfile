@@ -1,5 +1,5 @@
 podTemplate(label: 'icp', cloud: 'default') {
-    containerTemplate('jnlp')
+    containerTemplate('icpbuilder')
     node('jnlp') {
         stage('Run shell') {
             sh 'echo hello world'
