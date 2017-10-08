@@ -1,4 +1,4 @@
-podTemplate(cloud: 'default', tag: 'icp') {
+podTemplate('icp') {
     containerTemplate(tag: 'icp')
     node('jnlp') {
         stage('Run shell') {
