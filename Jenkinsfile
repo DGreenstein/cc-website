@@ -1,6 +1,6 @@
-podTemplate(cloud: 'default', name: 'default') {
+podTemplate(cloud: 'default', tag: 'icp') {
     containerTemplate(tag: 'icp')
-    node('default') {
+    node('jnlp') {
         stage('Run shell') {
             sh 'echo hello world'
         }
