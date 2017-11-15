@@ -1,0 +1,14 @@
+sudo: required
+
+language: node_js
+
+services:
+  - docker
+
+before_install:
+  - docker build -t dhgreenstein/cloudchaos .
+  - docker run -d -p 127.0.0.1:3000:3000
+  - docker ps -a
+
+script:
+  - curl http://127.0.0.1:3000
