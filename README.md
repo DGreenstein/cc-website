@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/DGreenstein/cc-website.svg?branch=master)](https://travis-ci.org/DGreenstein/cc-website)
 # Cloud Chaos Website
 This is the webiste wich can be found at https://cloud-chaos.com
 
