@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cc-site-svc
+  namespace: cc-website
+  labels:
+    app: cc-website
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
+  selector:
+    app: cc-website

@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cc-site-ingress
+  namespace: cc-website
+  labels:
+    app: cc-website
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - hosts:
+    - cloud-chaos.com
+    - www.cloud-chaos.com
+    - demo.cloud-chaos.com
+    secretName: cloudchaos-tls
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: cc-site-svc
+          servicePort: 3000
