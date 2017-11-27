@@ -1,5 +1,4 @@
-sudo: required
-
+#sudo: required
 language: node_js
 
 services:
@@ -7,7 +6,7 @@ services:
 
 before_install:
   - docker build -t dhgreenstein/cloudchaos:latest .
-  - docker run -d -rm -p 3000:3000 dhgreenstein/cloudchaos:latest
+  - docker run -d -p 3000:3000 dhgreenstein/cloudchaos:latest
   - docker ps -a
 
 script:
