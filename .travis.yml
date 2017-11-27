@@ -6,7 +6,7 @@ services:
 
 before_install:
   - docker build -t dhgreenstein/cloudchaos:latest .
-  - docker run -d -p 127.0.0.1:3000:3000 dhgreenstein/cloudchaos:latest
+  - docker run -d -p 127.0.0.1:3000:3000 dhgreenstein/cloudchaos:latest /bin/sh -c "cd /usr/src/webserver; npm install; npm start"
   - docker ps -a
 
 script:
