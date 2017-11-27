@@ -6,7 +6,8 @@ services:
 
 before_install:
   - docker build -t dhgreenstein/cloudchaos:latest .
-  - docker run -d -p 127.0.0.1:3000:3000 dhgreenstein/cloudchaos:latest
+  - docker run -d --net=host -p 127.0.0.1:3000:3000 dhgreenstein/cloudchaos:latest
+  - sleep 15
   - docker ps -a
 
 script:
